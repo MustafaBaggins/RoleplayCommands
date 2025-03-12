@@ -27,7 +27,7 @@ namespace RoleplayCommands.Komutlar
 
             var message = rnd.Next(1, 7).ToString();
 
-            List<Player> nearbyPlayers = GetPlayersInRange(player, Config.CommandRadius);
+            List<Player> nearbyPlayers = Komutlar.@do.GetPlayersInRange(player, Config.CommandRadius);
 
             if (player.Role == RoleTypeId.Spectator || player.Role == RoleTypeId.Overwatch)
             {
@@ -76,21 +76,5 @@ namespace RoleplayCommands.Komutlar
             return true;
         }
 
-        public List<Player> GetPlayersInRange(Player player, float radius)
-        {
-            List<Player> nearbyPlayers = new List<Player>();
-            Vector3 playerPosition = player.Position;
-
-            foreach (Player p in Player.List)
-            {
-                if (p != player && Vector3.Distance(p.Position, playerPosition) <= radius)
-                {
-                    nearbyPlayers.Add(p);
-                }
-            }
-            nearbyPlayers.Add(player);
-
-            return nearbyPlayers;
-        }
     }
 }

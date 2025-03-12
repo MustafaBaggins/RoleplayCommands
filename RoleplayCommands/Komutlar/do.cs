@@ -86,7 +86,7 @@ namespace RoleplayCommands.Komutlar
             return true;
         }
 
-        public List<Player> GetPlayersInRange(Player player, float radius)
+        public static List<Player> GetPlayersInRange(Player player, float radius)
         {
             List<Player> nearbyPlayers = new List<Player>();
             Vector3 playerPosition = player.Position;
