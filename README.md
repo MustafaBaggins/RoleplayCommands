@@ -8,4 +8,4 @@
 * This plugin also uses HintServiceMeow as a dependency, so you should also download [HSM](https://github.com/MeowServer/HintServiceMeow/releases)
 
 # Support
-* For any issues create an issue or contact me on Discord Baggins(@haci33)
+* For any issues contact me on Discord Baggins(@haci33)
