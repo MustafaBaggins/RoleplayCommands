@@ -33,6 +33,11 @@ namespace RoleplayCommands.Komutlar
 
             List<Player> nearbyPlayers = GetPlayersInRange(player, Config.CommandRadius);
 
+            if (message.Length > 30)
+            {
+                message = message.Substring(0, 30);
+            }
+
             if (player.Role == RoleTypeId.Spectator || player.Role == RoleTypeId.Overwatch)
             {
                 response = main.Instance.Translation.SpectatorsCantUseMessage;

@@ -27,6 +27,11 @@ namespace RoleplayCommands.Komutlar
 
             var message = rnd.Next(1, 7).ToString();
 
+            if (message.Length > 30)
+            {
+                message = message.Substring(0, 30);
+            }
+
             List<Player> nearbyPlayers = Komutlar.@do.GetPlayersInRange(player, Config.CommandRadius);
 
             if (player.Role == RoleTypeId.Spectator || player.Role == RoleTypeId.Overwatch)
