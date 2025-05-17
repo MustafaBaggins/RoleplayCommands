@@ -32,9 +32,9 @@ namespace RoleplayCommands.Komutlar
 
             List<Player> nearbyPlayers = Komutlar.@do.GetPlayersInRange(player, Config.CommandRadius);
 
-            if (message.Length > 30)
+            if (message.Length > main.Instance.Config.MaxMessageLength)
             {
-                message = message.Substring(0, 30);
+                message = message.Substring(0, main.Instance.Config.MaxMessageLength);
             }
 
             if (player.Role == RoleTypeId.Spectator || player.Role == RoleTypeId.Overwatch)

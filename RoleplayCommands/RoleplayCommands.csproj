@@ -62,6 +62,10 @@
     <Reference Include="Mirror">
       <HintPath>..\..\..\..\Documents\Master\Mirror.dll</HintPath>
     </Reference>
+    <Reference Include="PluginAPI, Version=13.1.5.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Documents\Exiled Snippets\Master\PluginAPI.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -89,7 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="ExMod.Exiled">
-      <Version>9.5.1</Version>
+      <Version>9.6.0-beta8</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup />

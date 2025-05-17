@@ -10,7 +10,7 @@ namespace RoleplayCommands
     {
         public bool IsEnabled { get; set; } = true;
 
-        public bool Debug { get; set; } = true;
+        public bool Debug { get; set; } = false;
 
         public float HintDuration { get; set; } = 10f;
 
@@ -21,5 +21,7 @@ namespace RoleplayCommands
         public string ServerName { get; set; } = " ServerName ";
 
         public string RollCommandName { get; set; } = "zarat";
-     }
+
+        public int MaxMessageLength { get; set; } = 30;
+    }
 }
