@@ -22,6 +22,8 @@ namespace RoleplayCommands
 
         public string RollCommandName { get; set; } = "zarat";
 
+        public bool ShowDisplayName { get; set; } = false;
+
         public int MaxMessageLength { get; set; } = 30;
     }
 }

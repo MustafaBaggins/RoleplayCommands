@@ -62,9 +62,21 @@ namespace RoleplayCommands.Komutlar
 
             foreach (Player p in nearbyPlayers)
             {
+                string displayName = player.DisplayNickname;
+                string nickname = player.Nickname;
+                string displayNameText = player.Nickname;
+
+                if (main.Instance.Config.ShowDisplayName)
+                {
+                    if (!string.Equals(nickname, displayName, StringComparison.Ordinal))
+                    {
+                        displayNameText = $"({nickname}) {displayName}";
+                    }
+                }
+
                 HintServiceMeow.Core.Models.Hints.DynamicHint hint = new HintServiceMeow.Core.Models.Hints.DynamicHint()
                 {
-                    Text = $"<b><color=#6a6964ff> <size=14>{Config.ServerName}</size></color><color=#fade04ff> {player.Nickname}</color><color=#6a6964ff> /</color> <b><color=#e80c0cff>OOC</color></b>: <color=#fade04ff>{message}</color></b>",
+                    Text = $"<b><color=#6a6964ff> <size=14>{Config.ServerName}</size></color><color=#fade04ff> {displayNameText}</color><color=#6a6964ff> /</color> <b><color=#e80c0cff>OOC</color></b>: <color=#fade04ff>{message}</color></b>",
                     BottomBoundary = 950f,
                     RightBoundary = -1100,
                     LeftBoundary = -1100,
